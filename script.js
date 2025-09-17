@@ -155,10 +155,10 @@ const displayDates = () => {
     dates.innerHTML = "";
 
     // * Display the las week of previous month
-    const firstOfPrevMonth = new Date(year, month, 0);
+    const lastOfPrevMonth = new Date(year, month, 0);
 
-    for (i = 0; i <= firstOfPrevMonth.getDay(); i++) {
-        const text = firstOfPrevMonth.getDate() - firstOfPrevMonth.getDay() + i;
+    for (i = 0; i <= lastOfPrevMonth.getDay(); i++) {
+        const text = lastOfPrevMonth.getDate() - lastOfPrevMonth.getDay() + i;
         const button = createButton(text, true, false);
         dates.appendChild(button);
     }
