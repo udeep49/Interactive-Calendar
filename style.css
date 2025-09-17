@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    color: #000;
+}
+
+body {
+    background: rgb(141, 164, 108);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.date-input {
+    padding: 15px;
+    font-size: 1rem;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.datepicker {
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.calendar {
+    width: 305px;
+    height: 330px;
+    background: #fff;
+    padding: 5px;
+    border: 5px solid #fff;
+    border-radius: 5px;
+}
+
+.datepicker button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+.datepicker-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(128, 0, 0, 0.1);
+}
+
+.datepicker-header input, 
+.datepicker-header select {
+    font-size: 14px;
+    border: 1px solid rgba(128, 0, 0, 0.1);
+}
+
+.datepicker-header input:hover,
+.datepicker-header select:hover {
+    background: rgba(128, 0, 0, 0.1);
+}
+.datepicker-header button {
+    color: slategray;
+}
+
+.datepicker-header button:hover {
+    color: maroon;
+}
+
+.days,
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 32px);
+    gap: 10px;
+    margin-block: 10px;
+}
+
+.days span {
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    color: maroon;
+}
+
+.dates button {
+    color: slategray;
+    aspect-ratio: 1;
+}
+
+.dates button:hover {
+    background: rgba(119, 136, 153, 0.2);
+}
+
+.dates button.today {
+    background: rgba(128, 0, 0, 0.2);
+    color: maroon;
+}
+
+.dates button.selected {
+    background: maroon;
+    color: white;
+}
+
+.dates button:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    user-select: none;
+}
