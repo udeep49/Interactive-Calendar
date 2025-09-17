@@ -27,7 +27,6 @@ monthsRange.forEach((monthsRange) => {
 const years = document.createElement("input");
 years.className = "years";
 years.type = "number";
-years.value = 2025;
 years.min = "1970";
 years.max = "2100";
 
@@ -58,33 +57,9 @@ daysRange.forEach((daysRange) => {
 
 // C. Dates:
 
-const datesRange = [1, 2 , 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
-                 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
-
 const dates = document.createElement("div");
 dates.className = "dates";
 
-datesRange.forEach((datesRange) => {
-    let button = document.createElement("button");
-    button.textContent = datesRange;
-
-    // * disable dates from 1 to 5:
-    if (datesRange >= 1 && datesRange <= 5) {
-    button.disabled = true;
-    }
-
-    // *add "today" class to 13:
-    if (datesRange === 13) {
-        button.className = "today";
-    }
-
-    // *add "selected" class to 13:
-    if (datesRange === 23) {
-        button.className = "selected";
-    }
-
-    dates.append(button);
-})
 
 // create "calendar" div class itself inside datepicker:
 const calendar = document.createElement("div");
